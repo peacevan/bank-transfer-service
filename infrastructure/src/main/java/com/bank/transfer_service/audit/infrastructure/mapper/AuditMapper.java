@@ -10,6 +10,7 @@ import java.time.Instant;
  * Bidirectional mapper between AuditLog (domain) and AuditLogDocument (persistence).
  * Keeps domain objects free from MongoDB annotations.
  */
+@Component
 public class AuditMapper {
 
     public AuditMapper() {}

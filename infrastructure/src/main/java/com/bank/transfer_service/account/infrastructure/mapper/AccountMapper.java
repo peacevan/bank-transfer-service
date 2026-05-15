@@ -13,6 +13,7 @@ import java.math.BigDecimal;
  * Bidirectional mapper between Account (domain) and AccountDocument (persistence).
  * Keeps domain objects free from MongoDB annotations.
  */
+@Component
 public class AccountMapper {
 
     public AccountMapper() {}

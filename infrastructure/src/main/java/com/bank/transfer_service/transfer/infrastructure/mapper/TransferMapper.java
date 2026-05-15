@@ -16,6 +16,7 @@ import java.time.Instant;
  * Bidirectional mapper between Transfer (domain) and TransferDocument (persistence).
  * Keeps domain objects free from MongoDB annotations.
  */
+@Component
 public class TransferMapper {
 
     public TransferMapper() {}

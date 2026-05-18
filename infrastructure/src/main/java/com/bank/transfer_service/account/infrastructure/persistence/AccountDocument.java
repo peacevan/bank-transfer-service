@@ -1,14 +1,14 @@
 package com.bank.transfer_service.account.infrastructure.persistence;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.math.BigDecimal;
 
-/**
- * MongoDB document mapping for the "accounts" collection.
- * Annotated with @Document(collection = "accounts").
- * Never exposed outside the infrastructure layer.
- */
+@Document(collection = "accounts")
 public class AccountDocument {
 
+    @Id
     private String id;
     private String ownerName;
     private String ownerDocument;

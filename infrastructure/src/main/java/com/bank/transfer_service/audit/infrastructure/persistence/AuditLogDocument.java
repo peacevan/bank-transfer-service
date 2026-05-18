@@ -1,14 +1,14 @@
 package com.bank.transfer_service.audit.infrastructure.persistence;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.Instant;
 
-/**
- * MongoDB document mapping for the "audit_logs" collection.
- * Annotated with @Document(collection = "audit_logs").
- * Never exposed outside the infrastructure layer.
- */
+@Document(collection = "audit_logs")
 public class AuditLogDocument {
 
+    @Id
     private String id;
     private String eventType;
     private String correlationId;

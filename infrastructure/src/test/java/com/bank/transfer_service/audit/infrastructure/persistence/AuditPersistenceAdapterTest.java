@@ -20,7 +20,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.NONE,
-        properties = "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration")
+        properties = {
+                "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration",
+                "de.flapdoodle.mongodb.embedded.version=7.0.0"
+        })
 @SuppressWarnings("unused")
 class AuditPersistenceAdapterTest {
 
